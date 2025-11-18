@@ -1,30 +1,28 @@
-import myImage from "./assets/sp.jpeg";
-import "./Hstyle.css";
+import "./Home.css";
+import { motion } from "framer-motion";
 
 function Home() {
   return (
-    <div
-      style={{
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        justifyContent: "center",
-        minHeight: "100vh",
-        textAlign: "center"
-      }}
-    >
-      <h1 style={{ fontSize: "48px", marginBottom: "20px" }}>SPACER</h1>
+    <div className="home-bg">
+      <div className="overlay"></div>
 
-      <img
-        src={myImage}
-        alt="Spacer Logo"
-        style={{ width: "200px", height: "auto", marginBottom: "30px" }}
-      />
+      <motion.div
+        className="content-box"
+        initial={{ opacity: 0, y: 40 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+      >
+        <h1 className="title">SPACER</h1>
+        <p className="subtitle">
+          Find. Book. Experience.  
+          <br />
+          Smart Spaces for Smart People.
+        </p>
 
-      <a className="btn btn-primary" href="/login"
-      style={{ padding: "10px 30px", fontSize: "20px" }}>
-        Login
-      </a>
+        <a className="login-btn" href="/login">
+          Get Started →
+        </a>
+      </motion.div>
     </div>
   );
 }
