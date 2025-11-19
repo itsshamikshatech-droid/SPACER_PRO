@@ -10,7 +10,7 @@ import Seller from "./Seller.jsx";
 import Jobseeker from "./Jobseeker.jsx";
 import Skills from "./Skills";
 import ServiceProviderSetup from "./ServiceProviderSetup";
-import ListSpace from './listspace.jsx';
+import ListSpace from './ListSpace.jsx';
 import SpaceDetails from "./SpaceDetails.jsx"
 import Booking from "./Booking.jsx"
 
